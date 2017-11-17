@@ -1,6 +1,6 @@
 # jiggajiggaAI
 
-###Strategy:
+# Strategy:
 
 11/16/17
  - Find the average score of all the runners (the score of runners is calculated by 100-C(p, 2))
