@@ -13,3 +13,4 @@
  - Total score of all runners
     - (62+2/3)x15 = 960
     - Average for every team: 960/5 = 232
+sdfsdf
