@@ -6,7 +6,9 @@ def ai(pos, funds, dist):
     # to counter steadyfreddy?
     
     if valuepermeter <= 3333 and pos[0] < 25 or pos[1] < 25 or pos[2] < 25:
-        valuepermeter = 3333 + random.randint(25, 300)
+        valuepermeter = 3258 + random.randint(25, 100)
+    
+    print(valuepermeter)
     '''
     if valuepermeter <= 3333 and pos[0] < 50 or pos[1] < 50 or pos[2] < 50:
         valuepermeter = 3333 + random.randint(25, 300)
