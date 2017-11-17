@@ -11,7 +11,6 @@ Variables:
      A dictionary of the runners containing first the bids of the runners, then the runner number
   - smallRun, midRun, bigRun:
      The runner that needs the most meters, middle amount of meters, and then the least meters to finish the race
-     \
      
 
 11/16/17
