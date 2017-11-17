@@ -13,3 +13,10 @@
  - Total score of all runners
     - (62+2/3)x15 = 960
     - Average for every team: 960/5 = 232
+ 
+ # Current AI
+ - Calculates the value per meter
+ - does a steadyfreddy check
+ - the runner in the lowest position bids on the higher number
+ - the runner in the highest position bids on the lower number
+ - the runner in the middle position bids on the middle number
