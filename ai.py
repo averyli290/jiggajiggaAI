@@ -2,16 +2,21 @@ from random import shuffle
 
 def ai(pos, funds, dist):
     import random
-    valuepermeter = funds[0]/(350-pos[0]-pos[1]-pos[2])
-    # to counter steadyfreddy?
-    
-    if valuepermeter <= 3333 and pos[0] < 25 or pos[1] < 25 or pos[2] < 25:
-        valuepermeter = 3258 + random.randint(25, 100)
-    
-    print(valuepermeter)
+    valuepermeter = funds[0]/(333-pos[0]-pos[1]-pos[2])
     '''
-    if valuepermeter <= 3333 and pos[0] < 50 or pos[1] < 50 or pos[2] < 50:
-        valuepermeter = 3333 + random.randint(25, 300)
+    valuepermeter0 = (funds[0]/3)/(111-pos[0])
+    valuepermeter1 = (funds[0]/3)/(111-pos[1])
+    valuepermeter2 = (funds[0]/3)/(111-pos[2])
+    '''
+    # to counter steadyfreddy?
+    '''
+    print(valuepermeter0)
+    print(valuepermeter1)
+    print(valuepermeter2)
+    '''
+    '''
+    if valuepermeter <= 3000 and (pos[0] < 50 or pos[1] < 50 or pos[2] < 50):
+        valuepermeter = 3001
     '''
     smallbid = valuepermeter*dist[0]
     midbid = valuepermeter*dist[1]
