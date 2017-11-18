@@ -1,28 +1,44 @@
 from random import shuffle
 
 def ai(pos, funds, dist):
-    valuepermeter = funds[0] / (300-pos[0]-pos[1]-pos[2])
+    import random
+    valuepermeter = funds[0]/(350-pos[0]-pos[1]-pos[2])
+    # to counter steadyfreddy?
+    
+    if valuepermeter <= 3333 and pos[0] < 25 or pos[1] < 25 or pos[2] < 25:
+        valuepermeter = 3258 + random.randint(25, 100)
+    
+    print(valuepermeter)
+    '''
+    if valuepermeter <= 3333 and pos[0] < 50 or pos[1] < 50 or pos[2] < 50:
+        valuepermeter = 3333 + random.randint(25, 300)
+    '''
     smallbid = valuepermeter*dist[0]
     midbid = valuepermeter*dist[1]
     bigbid = valuepermeter*dist[2]
 
-    d = {100 - pos[0]: 0, 100 - pos[1]: 1, 100 - pos[2]: 2}
-
+    runnerpos = [pos[0], pos[1], pos[2]]
+    
     values = [["short", smallbid], ["medium", midbid], ["long", bigbid]]
 
-    bids = [[],[],[]]
+    bigRun = 0
+    smallRun = 1
 
-    runnerpos = [pos[0], pos[1], pos[2]]
-
-    bigRun = runnerpos.index(max(runnerpos))
-    smallRun = runnerpos.index(min(runnerpos))
-    midRun = 0
-    for i in runnerpos:
-        if i is not bigRun and i is not smallRun:
-            midRun = i
-
+    for i in range(3):
+        if runnerpos[i] > runnerpos[bigRun]:
+            bigRun = i
+        elif runnerpos[i] < runnerpos[smallRun]:
+            smallRun = i
+    
+    midRun = [0, 1, 2]
+    midRun.remove(bigRun)
+    midRun.remove(smallRun)
+    midRun = midRun[0]
+    
+    bids = [[], [], []]
+    
     bids[smallRun] = ["long", bigbid]
     bids[bigRun] = ["short", smallbid]
     bids[midRun] = ["medium", midbid]
-
+    
     return bids
