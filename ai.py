@@ -20,13 +20,6 @@ def ai(pos, funds, dist):
     '''
     
     if not (pos[0]+pos[1]+pos[2])//3 <= 75:
-        '''
-        done = 0
-        for i in range(3):
-            if pos[i] == 100:
-                done += 1
-        boost =
-        '''
         smallbid = valuepermeter0*dist[0]+7500
         midbid = valuepermeter1*dist[1]+7500
         bigbid = valuepermeter2*dist[2]+7500
