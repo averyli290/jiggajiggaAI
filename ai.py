@@ -5,15 +5,15 @@ def ai(pos, funds, dist):
     if runnersdone == 2:
         valuepermeter = funds[0] / (300 - pos[0] - pos[1] - pos[2])
     '''
-    value_per_meter0 = (funds[0]/3)/(111-pos[0])
-    value_per_meter1 = (funds[0]/3)/(111-pos[1])
-    value_per_meter2 = (funds[0]/3)/(111-pos[2])
+    valuepermeter0 = (funds[0]/3)/(111-pos[0])
+    valuepermeter1 = (funds[0]/3)/(111-pos[1])
+    valuepermeter2 = (funds[0]/3)/(111-pos[2])
     '''
     # to counter steadyfreddy?
     '''
-    print(value_per_meter0)
-    print(value_per_meter1)
-    print(value_per_meter2)
+    print(valuepermeter0)
+    print(valuepermeter1)
+    print(valuepermeter2)
     '''
     '''
     if valuepermeter <= 3000 and (pos[0] < 50 or pos[1] < 50 or pos[2] < 50):
